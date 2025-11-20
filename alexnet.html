@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day vs Night Image Classification – MathData2025</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f9;
+            color: #222;
+        }
+        header {
+            background: #1e1e2f;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #1e1e2f;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+        }
+        .code-block {
+            background: #eeeeee;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e1e2f;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Day vs Night Image Classification</h1>
+    <h3>MathData2025 – Deep Learning Project</h3>
+</header>
+
+
+<div class="container">
+
+    <!-- PROJECT OVERVIEW -->
+    <div class="section">
+        <h2>📌 Project Overview</h2>
+        <p>
+            This project classifies images into <strong>Day</strong> or <strong>Night</strong> categories using
+            convolutional neural networks (CNNs). Multiple machine learning experiments were run using PyTorch,
+            torchvision models, and Weights & Biases (wandb) for tracking.
+        </p>
+        <p>
+            The dataset and code are stored in the repository, and this website summarizes the methodology,
+            experiments, and results.
+        </p>
+    </div>
+
+    <!-- DATASET -->
+    <div class="section">
+        <h2>📂 Dataset</h2>
+        <p>
+            The dataset contains two folders:
+        </p>
+        <ul>
+            <li><strong>day/</strong> – daylight images</li>
+            <li><strong>night/</strong> – nighttime images</li>
+        </ul>
+        <p>
+            Images are resized to <strong>227×227</strong> to match AlexNet input requirements.
+        </p>
+    </div>
+
+    <!-- MODELS USED -->
+    <div class="section">
+        <h2>🧠 Models Trained</h2>
+        <ul>
+            <li><strong>Custom AlexNet</strong> (from scratch)</li>
+            <li><strong>VGG16</strong> (pretrained)</li>
+            <li><strong>ResNet18</strong> (pretrained)</li>
+        </ul>
+    </div>
+
+    <!-- EXPERIMENTS -->
+    <div class="section">
+        <h2>⚗️ Experiments Conducted</h2>
+
+        <p>The following experiments were run and logged using wandb:</p>
+
+        <ul>
+            <li>Batch Size Comparison (16 vs 64)</li>
+            <li>Learning Rate Comparison (0.001 vs 0.0001)</li>
+            <li>With vs Without Data Augmentation</li>
+            <li>AlexNet vs VGG16 vs ResNet18</li>
+        </ul>
+
+        <h3>Example Experiment Config (wandb)</h3>
+        <div class="code-block">
+            {
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "augmentation": true,
+                "model": "alexnet"
+            }
+        </div>
+    </div>
+
+    <!-- RESULTS SECTION -->
+    <div class="section">
+        <h2>📊 Results</h2>
+        <p>
+            Each experiment logs:
+        </p>
+        <ul>
+            <li>Train & Test Accuracy Curves</li>
+            <li>Train & Test Loss Curves</li>
+            <li>Confusion Matrix</li>
+            <li>Hyperparameters & Model Settings</li>
+        </ul>
+
+        <p>You can view detailed results on Weights & Biases:</p>
+        <p><strong>Your wandb project link here</strong></p>
+
+        <h3>Example Charts (replace with your images)</h3>
+        <img src="https://dummyimage.com/800x400/cccccc/000000&text=Training+Accuracy+Curve" alt="Training Curve">
+        <img src="https://dummyimage.com/800x400/cccccc/000000&text=Confusion+Matrix" alt="Confusion Matrix">
+    </div>
+
+    <!-- CODE SNIPPET -->
+    <div class="section">
+        <h2>🧩 Training Code Used</h2>
+        <p>Here is the simplified version of the training pipeline:</p>
+
+        <div class="code-block">
+            def train_model(model, train_loader, test_loader):
+                for epoch in range(epochs):
+                    # training loop
+                    # evaluation
+                    # wandb logging
+                    pass
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>MathData2025 Project – Built with PyTorch & wandb</p>
+</footer>
+
+</body>
+</html>
 
